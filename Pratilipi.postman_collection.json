@@ -1,0 +1,385 @@
+{
+	"info": {
+		"_postman_id": "ea6f1f21-6deb-4a33-9772-c45b4ab11bba",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Upload Content Bulk",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    \n    {\n        \"title\": \"Harry5\",\n        \"description\": \"my desc\",\n        \"chapters\": [\n            {\n                \"name\": \"New\",\n                \"desc\": \"d1\"\n            },\n            {\n                \"name\": \"n2\",\n                \"desc\": \"d2\"\n            },\n            {\n                \"name\": \"n3\",\n                \"desc\": \"d3\"\n            },\n            {\n                \"name\": \"n4\",\n                \"desc\": \"d4\"\n            },\n            {\n                \"name\": \"n5\",\n                \"desc\": \"d5\"\n            },\n            {\n                \"name\": \"n6\",\n                \"desc\": \"d6\"\n            }\n        ]\n    }\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/series/create/many",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"series",
+						"create",
+						"many"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Upload Content Bulk",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    \n    {\n        \"title\": \"Harry5\",\n        \"description\": \"my desc\",\n        \"chapters\": [\n            {\n                \"name\": \"New\",\n                \"desc\": \"d1\"\n            },\n            {\n                \"name\": \"n2\",\n                \"desc\": \"d2\"\n            },\n            {\n                \"name\": \"n3\",\n                \"desc\": \"d3\"\n            },\n            {\n                \"name\": \"n4\",\n                \"desc\": \"d4\"\n            },\n            {\n                \"name\": \"n5\",\n                \"desc\": \"d5\"\n            },\n            {\n                \"name\": \"n6\",\n                \"desc\": \"d6\"\n            }\n        ]\n    }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/series/create/many",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"series",
+								"create",
+								"many"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Fetch all content",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/series/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"series",
+						"all"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Fetch all content",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/series/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"series",
+								"all"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"test\",\n    \"email\":\"testng@gmail.com\",\n    \"password\": \"123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/user/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"user",
+						"create"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create User",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"test\",\n    \"email\":\"testng@gmail.com\",\n    \"password\": \"123456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/user/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"user",
+								"create"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Fetch content for a user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/series/625dc298546c7edede69172b?userId=625dc2ef736ad5882dce47e7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"series",
+						"625dc298546c7edede69172b"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "625dc2ef736ad5882dce47e7"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Fetch content for a user",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/series/625dc298546c7edede69172b?userId=625dc2ef736ad5882dce47e7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"series",
+								"625dc298546c7edede69172b"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "625dc2ef736ad5882dce47e7"
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Fetch all users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/user/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"user",
+						"all"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Fetch all users",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/user/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"user",
+								"all"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Unlock Chapter for a user",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\":\"625dc2ef736ad5882dce47e7\",\n    \"seriesId\":\"625dc298546c7edede69172b\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/dailypass/unlock",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"dailypass",
+						"unlock"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Unlock Chapter for a user",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userId\":\"625dc2ef736ad5882dce47e7\",\n    \"seriesId\":\"625dc298546c7edede69172b\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/dailypass/unlock",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"dailypass",
+								"unlock"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Fetch Details of a single user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/user/625dc2ef736ad5882dce47e7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"user",
+						"625dc2ef736ad5882dce47e7"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Fetch Details of a single user",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/user/625dc2ef736ad5882dce47e7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"user",
+								"625dc2ef736ad5882dce47e7"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,62 @@
+version: "3"
+services:
+  api-server-user:
+    image: pratilipi-user-service
+    ports:
+      - "5000:5000"
+    networks:
+      - users-app
+    depends_on:
+      - mongo-user
+  mongo-user:
+    image: mongo
+    networks:
+      - users-app
+    volumes:
+      - mongo-data:/data/db
+  
+  api-server-content:
+    image: pratilipi-content-service
+    ports:
+      - "3000:3000"
+    networks:
+      - content-app
+    depends_on:
+      - mongo-content
+  mongo-content:
+    image: mongo
+    networks:
+      - content-app
+    volumes:
+      - mongo-data2:/data/db
+
+  api-server-dailypass:
+    image: pratilipi-dailypass-service
+    ports:
+      - "4000:4000"
+    networks:
+      - dailypass-app
+    depends_on:
+      - mongo-dailypass
+  mongo-dailypass:
+    image: mongo
+    networks:
+      - dailypass-app
+    volumes:
+      - mongo-data3:/data/db
+
+networks:
+  users-app:
+    driver: bridge
+  content-app:
+    driver: bridge
+  dailypass-app:
+    driver: bridge
+  
+volumes:
+  mongo-data:
+    driver: local
+  mongo-data2:
+    driver: local
+  mongo-data3:
+    driver: local
