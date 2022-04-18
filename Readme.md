@@ -1,5 +1,5 @@
 ## Steps to Run
-Currently, docker setup is not done. Neither the services are hosted. DB is connected to Atlas for now.
+Currently, docker setup is not done. Neither the services are hosted. DB is connected to Atlas for
 
 First install nodemon globally using `npm i -g nodemon`
 
@@ -44,4 +44,7 @@ Built microservices using `sync` form of communication.
 6. A well structured and designed database models and schema. Could only think of these for now.
 
 
-P.S: The concept was brand new. Read different things about async and sync but was able to implement the sync method only with full understanding of clthings.
+P.S: The concept was brand new. Read different things about async and sync but was able to implement the sync method only with full understanding of things.
+As I used sync communication, I was unable to set up communication between different services while working with `docker-compose`.
+API Calls that did not require any data from other apis worked fine, but those who get or post data failed.
+
